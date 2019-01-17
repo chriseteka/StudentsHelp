@@ -3,7 +3,7 @@ import { StyleSheet, Text, View } from "react-native";
 import { GiftedChat } from "react-native-gifted-chat";
 import { DirectLine } from "botframework-directlinejs";
 const directLine = new DirectLine({
-  secret: "cX2xv8Nr7lE.cwA.Ezg.M3TKmWXrVYOofcC0ZQoMohtB1npcJYfq9uG8Bpz9-Vc"
+  secret: "y4utNigYu6g.cwA.uLk.tejbQKMRoxmDWuD99kb4yYopEBL0qtR2hXOL6Yxb6k0"
 });
 const botMessageToGiftedMessage = botMessage => ({
   ...botMessage,
@@ -11,14 +11,14 @@ const botMessageToGiftedMessage = botMessage => ({
   createdAt: botMessage.timestamp,
   user: {
     _id: 2,
-    name: "Assistant_Dru",
+    name: "React Native",
     avatar:
       "https://cdn.iconscout.com/public/images/icon/free/png-512/avatar-user-business-man-399587fe24739d5a-512x512.png"
   }
 });
 function giftedMessageToBotMessage(message) {
   return {
-    from: { id: 1, name: "The users_name" },
+    from: { id: 1, name: "John Doe" },
     type: "message",
     text: message.text
   };
